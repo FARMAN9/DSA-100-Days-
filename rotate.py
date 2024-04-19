@@ -16,3 +16,23 @@ def Rotate(arr,R):
 #-------------------------calling
 
 Rotate(arr,R)
+
+#__________________________________________________________________
+
+def rotate_array(array,k):
+    #write code 
+    n=len(array)
+    if n==0:
+        return array
+    print("\nlength of array" ,n)
+    k=k%n
+    temp=array[-k:]
+    for i in reversed(range(len(array)-k)):
+        array[i+k]=array[i]
+    for i in range(len(temp)):
+        array[i]=temp[i]
+        
+    #array = array[k:] + array[:k]
+    #print("\nrotated_array", array)
+    
+    return array
