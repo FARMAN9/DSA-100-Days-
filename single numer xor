@@ -1,1 +1,17 @@
 
+class Solution:
+    def singleNumber(self, nums: list[int]) -> int:
+        # Initialize a variable to hold the XOR result
+        single_number = 0
+        
+        # Iterate through the list and XOR each element with the current result
+        for num in nums:
+            single_number ^= num
+        
+        # The resulting XOR value will be the single number that appears only once
+        return single_number
+
+# Example usage:
+nums = [2, 2, 1]
+solution = Solution()
+print(solution.singleNumber(nums))  # Output: 1
